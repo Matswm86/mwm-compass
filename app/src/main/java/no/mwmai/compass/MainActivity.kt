@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
     private val askLocation = registerForActivityResult(
         ActivityResultContracts.RequestPermission(),
     ) { granted ->
-        if (granted) locate() else if (declination == null) setTrueNorth(false)
+        if (granted) locate() else if (declination == null) switchNorth(false)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,8 +66,8 @@ class MainActivity : ComponentActivity() {
                     declination = declination,
                     locating = locating,
                     mark = mark,
-                    onToggleNorth = { setTrueNorth(!trueNorth) },
-                    onMark = { setMark(if (mark == null) reading.azimuth else null) },
+                    onToggleNorth = { switchNorth(!trueNorth) },
+                    onMark = { saveMark(if (mark == null) reading.azimuth else null) },
                 )
             }
         }
@@ -83,12 +83,12 @@ class MainActivity : ComponentActivity() {
         super.onPause()
     }
 
-    private fun setMark(value: Float?) {
+    private fun saveMark(value: Float?) {
         mark = value
         prefs.edit { if (value == null) remove("mark") else putFloat("mark", value) }
     }
 
-    private fun setTrueNorth(on: Boolean) {
+    private fun switchNorth(on: Boolean) {
         trueNorth = on
         prefs.edit { putBoolean("true_north", on) }
         if (!on) return
