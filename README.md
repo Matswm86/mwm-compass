@@ -43,14 +43,14 @@ uninstalling the old one first.
 |-----------|---------------|
 | `274° W` | Your heading, and its 16-point compass name |
 | MAGNETIC / TRUE | Which north the heading is measured from |
-| CAL HIGH / MED / LOW | How much Android trusts the magnetometer right now |
+| CAL HIGH / MED / LOW / POOR | How much Android trusts the magnetometer right now |
 | Amber triangle at the top | The fixed lubber mark: the direction the top of the phone points |
 | Amber triangle on the card | Your marked bearing |
 | Dot in the middle | Bubble level; it turns bright when the phone is within about 2° of level |
 
 **Accuracy.** A phone compass is only as good as its magnetometer. Keep it away
 from magnets, speakers, car dashboards, steel railings and phone cases with
-magnetic clasps. If CAL drops to LOW, wave the phone in a slow figure 8 a few
+magnetic clasps. If CAL drops to LOW or POOR, wave the phone in a slow figure 8 a few
 times. For navigation where a wrong bearing is dangerous, carry a real
 baseplate compass as well.
 
@@ -67,8 +67,8 @@ There is no local build step. GitHub Actions builds the APK on every push to
 a live heading reaches the display and sets a mark. The README screenshot comes
 from that emulator run.
 
-Kotlin and Jetpack Compose, no third-party libraries beyond AndroidX. The
-display font is JetBrains Mono (SIL Open Font License, see `licenses/`).
+Kotlin and Jetpack Compose, no third-party libraries beyond AndroidX and
+kotlinx.coroutines. The display font is JetBrains Mono (SIL Open Font License, see `licenses/`).
 
 ## License
 
