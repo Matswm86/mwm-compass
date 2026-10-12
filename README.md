@@ -8,7 +8,7 @@ That is the whole job.
 
 ## 📲 Download
 
-**[⬇ Latest APK](https://github.com/Matswm86/mwm-compass/releases/download/latest/mwm-compass-e04633d.apk)**
+**[⬇ Latest APK](https://github.com/Matswm86/mwm-compass/releases/download/latest/mwm-compass-abb6420.apk)**
 &nbsp;·&nbsp; [all builds](https://github.com/Matswm86/mwm-compass/releases)
 
 Open the link on your phone, tap the file, and allow "install from this source"
