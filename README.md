@@ -58,7 +58,7 @@ survive a restart.
 | `274° W` | Your heading, and its 16-point compass name |
 | MAGNETIC / TRUE | Which north the heading is measured from |
 | CAL HIGH / MED / LOW / POOR | How much Android trusts the magnetometer right now |
-| Amber triangle at the top | The fixed lubber mark: the direction the top of the phone points |
+| Amber triangle at the top | The fixed lubber mark: the direction the top of the phone points, or the back of the phone when held upright |
 | Amber triangle on the card | Your marked bearing |
 | Dot in the middle | Bubble level; it turns bright when the phone is within about 2° of level, and is hidden when the phone is held upright |
 
